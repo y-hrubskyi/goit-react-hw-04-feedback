@@ -6,7 +6,7 @@ import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 
 import { GlobalStyle } from './GlobalStyle';
-import { AppWrapper } from './App.styled';
+import { Layout } from './App.styled';
 
 export const App = () => {
   const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
@@ -30,7 +30,7 @@ export const App = () => {
   const total = countTotalFeedback();
 
   return (
-    <AppWrapper>
+    <Layout>
       <GlobalStyle />
 
       <Section title="Please leave a feedback">
@@ -50,6 +50,6 @@ export const App = () => {
           <Notification message="There is no feedback"></Notification>
         )}
       </Section>
-    </AppWrapper>
+    </Layout>
   );
 };
